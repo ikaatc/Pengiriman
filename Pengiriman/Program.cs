@@ -127,7 +127,19 @@ namespace Pengiriman
         }
         public void insert(string nmpeng, string nmpen, string idbrg)
         {
+            MySqlDataAdapter cmd = new MySqlDataAdapter("Select * From SQLQuery5", con);
+            DataSet ds = new DataSet();
+            cmd.Fill(ds, "sql");
+            DataTable dt = ds.Tables["sql"];
 
+            foreach (DataRow row in dt.Rows)
+            {
+                foreach (DataColumn col in dt.Columns)
+                {
+                    Console.WriteLine(row[col]);
+                }
+                Console.Write("\n");
+            }
         }
     }
 }
