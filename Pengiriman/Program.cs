@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Security.Cryptography;
-using MySql.data.mysqlclient;
+using MySql.Data.MySqlClient;
 
 namespace Pengiriman
 {
@@ -28,7 +29,21 @@ namespace Pengiriman
                     char chr = Convert.ToChar(Console.ReadLine());
                     switch (chr)
                     {
+                        case 'K':
+                            {
+                                MySqlConnection conn;
+                                string connectionString;
+                                connectionString = @"SERVER= " + server + ";DATABASE= " +
+                                    db + ";UserID= " + user + ";PASSWORD= " + pass + ";Port=3306";
 
+                                conn = new MySqlConnection(connectionString);
+                                conn.Open();
+                                Console.Clear();
+                                while (true)
+                                {
+
+                                }
+                            }
                     }
                 }
             }
