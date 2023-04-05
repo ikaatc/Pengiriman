@@ -52,14 +52,27 @@ namespace Pengiriman
                                         char ch = Convert.ToChar(Console.ReadLine());
                                         switch (ch)
                                         {
-
+                                            case '1':
+                                                {
+                                                    Console.Clear();
+                                                    Console.WriteLine("Data Pengiriman Barang\n");
+                                                    Console.WriteLine();
+                                                    pr.baca(conn);
+                                                }
+                                                break;
                                         }
                                     }
+                                    catch { }
                                 }
                             }
                     }
                 }
+                catch { }
             }
+        }
+        public void baca(MySqlConnection con)
+        {
+
         }
     }
 }
