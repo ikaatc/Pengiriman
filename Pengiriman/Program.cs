@@ -60,6 +60,27 @@ namespace Pengiriman
                                                     pr.baca(conn);
                                                 }
                                                 break;
+                                            case '2':
+                                                {
+                                                    Console.Clear();
+                                                    Console.WriteLine("INPUT DATA PENGIRIMAN\n");
+                                                    Console.WriteLine("Masukkan nama pengirim : ");
+                                                    string nmpeng = Console.ReadLine();
+                                                    Console.WriteLine("Masukkan nama penerima : ");
+                                                    string nmpen = Console.ReadLine();
+                                                    Console.WriteLine("Masukkan id barang : ");
+                                                    string idbrg = Console.ReadLine();
+                                                    try
+                                                    {
+                                                        pr.insert(nmpeng, nmpen, idbrg, conn);
+                                                        conn.Close();
+                                                    }
+                                                    catch
+                                                    {
+                                                        Console.WriteLine("\nAnda tidak memiliki " + "akses untuk menambah data");
+                                                    }
+                                                }
+                                                break;
                                         }
                                     }
                                     catch { }
@@ -71,6 +92,10 @@ namespace Pengiriman
             }
         }
         public void baca(MySqlConnection con)
+        {
+
+        }
+        public void insert(string nmpeng, string nmpen, string idbrg)
         {
 
         }
