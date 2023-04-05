@@ -41,7 +41,20 @@ namespace Pengiriman
                                 Console.Clear();
                                 while (true)
                                 {
+                                    try
+                                    {
+                                        Console.WriteLine("\nMenu");
+                                        Console.WriteLine("1. Melihat Seluruh Data");
+                                        Console.WriteLine("2. Tambah Data");
+                                        Console.WriteLine("3. Hapus Data");
+                                        Console.WriteLine("4. Keluar");
+                                        Console.Write("\nENter your choice (1-4): ");
+                                        char ch = Convert.ToChar(Console.ReadLine());
+                                        switch (ch)
+                                        {
 
+                                        }
+                                    }
                                 }
                             }
                     }
